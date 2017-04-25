@@ -6,7 +6,7 @@ class App extends React.component {
   render() {
     return (
       <div>
-        Hello World!
+        Hello React Training!
       </div>
     )
   }
