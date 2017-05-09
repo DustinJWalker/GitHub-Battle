@@ -1,7 +1,9 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 
-class SelectLanguage extends React.component {
-  render() {
+function SelectLanguage (props) {
+  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
+  return (
     <ul className= 'languages'>
       {languages.map(function (lang){
         return (
@@ -11,9 +13,15 @@ class SelectLanguage extends React.component {
             {lang}
           </li>
         )
-      }, this)}
+      })}
     </ul>
-  }
+
+  )
+}
+
+SelectLanguage.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
 }
 
 class Popular extends React.component {
@@ -32,9 +40,13 @@ class Popular extends React.component {
     });
   }
   render() {
-    var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
     return (
-
+        <div>
+          <SelectLanguage
+          selectedLanguage={this.state.selectedLanguage}
+          onSelect={this.updateLanguage}
+         />
+        </div>
     )
   }
 }
