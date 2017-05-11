@@ -46,3 +46,8 @@ li {
   max-width: 25%;
   border-radius: 50%;
 }
+
+.popular-rank {
+  font-size: 20px;
+  margin: 2rem;
+}
