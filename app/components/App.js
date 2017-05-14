@@ -9,22 +9,24 @@ var Battle = require('./Battle');
 var Switch = ReactRouter.Switch;
 
 class App extends React.component {
-  render() {
-    return (
-      <Router>
-      <div className = 'container'>
-        <Nav />
-        <Switch>
+    render() {
+        return (
+            <Router>
+                <div className='container'>
+                    <Nav/>
+                    <Switch>
 
-          <Route exact path='/' component={Home} />
-          <Route path='/battle' component={Battle} />
-          <Route path='/popular' component={Popular} />
-
-        </Switch>
-      </div>
-    </Router>
-    )
-  }
+                        <Route exact path='/' component={Home}/>
+                        <Route path='/battle' component={Battle}/>
+                        <Route path='/popular' component={Popular}/>
+                        <Route render={function () {
+                          return <p>Not Found</p>
+                        }} />
+                    </Switch>
+                </div>
+            </Router>
+        )
+    }
 }
 
 module.exports = App;
