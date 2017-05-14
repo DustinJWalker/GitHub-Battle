@@ -51,3 +51,7 @@ li {
   font-size: 20px;
   margin: 2rem;
 }
+
+.nav {
+  display: flex;
+}
