@@ -55,3 +55,7 @@ li {
 .nav {
   display: flex;
 }
+
+.active {
+  font-weight: bold;
+}
