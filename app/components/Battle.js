@@ -13,6 +13,11 @@ function PlayerPreview(props) {
         />
         <h2 className="username">@{props.username}</h2>
       </div>
+      <button
+        className='reset'
+        onClick={props.onReset.bind(null, props.id)}>
+          Reset
+        </button>
 
     </div>
   )
@@ -21,6 +26,7 @@ function PlayerPreview(props) {
 PlayerPreview.PropTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   onReset: PropTypes.function.isRequired
 }
 class PlayerInput extends React.Component {
