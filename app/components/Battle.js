@@ -29,6 +29,8 @@ PlayerPreview.PropTypes = {
   id: PropTypes.string.isRequired,
   onReset: PropTypes.function.isRequired
 }
+
+
 class PlayerInput extends React.Component {
   constructor(props) {
     super(props);
