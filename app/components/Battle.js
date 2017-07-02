@@ -143,9 +143,13 @@ class Battle extends React.Copmonent {
           <PlayerPreview
             avatar={playerOneImage}
             username={playerOneName}
-            onReset={this.handleReset}
-            id='playerOne'
-        />}
+        >
+          <button
+            className='reset'
+            onClick={props.handleReset.bind(null, 'playerOne')}>
+              Reset
+            </button>
+        </PlayerPreview>}
 
             {!playerTwoName &&
             <PlayerInput
@@ -157,12 +161,15 @@ class Battle extends React.Copmonent {
             {playerTwoImage !== null &&
             <PlayerPreview
               avatar={playerTwoImage}
-              username={playerTwoName}
-              onReset={this.handleReset}
-              id='playerTwo'
-          />}
+              username={playerTwoName}>}
+              <button
+                className='reset'
+                onClick={props.handleReset.bind(null, 'playerTwo')}>
+                  Reset
+                </button>
+              </PlayerPreview>}
+            </div>
 
-        </div>
 
         {playerOneImage && playerTwoImage &&
         <Link

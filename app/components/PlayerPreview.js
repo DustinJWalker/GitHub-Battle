@@ -13,10 +13,11 @@ function PlayerPreview(props) {
         />
         <h2 className="username">@{props.username}</h2>
       </div>
-
+      {props.children}
+    </div>
+)
+}
       PlayerPreview.PropTypes = {
         avatar: PropTypes.string.isRequired,
         username: PropTypes.string.isRequired,
-        id: PropTypes.string.isRequired,
-        onReset: PropTypes.function.isRequired
       }
