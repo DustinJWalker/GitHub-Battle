@@ -1,7 +1,10 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+//Node_ENV to production
+//uglify
+
+var config = {
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
